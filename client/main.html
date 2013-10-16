@@ -1,0 +1,27 @@
+<head>
+  <title>Boop</title>
+  <style>
+    .draggable {
+      float: left;
+      padding: 16px;
+      margin: 8px;
+      background: #F0F0D8;
+      border: 0;
+    }
+    .draggable img {
+      border: 1px solid #aaa;
+    }
+  </style>
+</head>
+<body>
+  {{> main}}
+</body>
+
+<template name="main">
+  <header>
+    {{loginButtons}}
+  </header>
+  <section>
+    {{renderPage}}
+  </section>
+</template>
