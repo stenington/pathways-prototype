@@ -1,0 +1,241 @@
+html, body, .main {
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans Light';
+  color: #1A5180;
+}
+
+.splash {
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 1px;
+  text-align: center;
+}
+
+.welcome {
+  position: relative;
+  margin: 30px;
+  padding: 200px 280px 360px;
+  display: inline-block;
+  text-align: center;
+  background: url('/bkgleft.png') left top no-repeat,
+    url('/bkgright.png') right 110px no-repeat;
+}
+
+.welcome h1 {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 42px;
+  margin: 0;
+}
+
+.welcome h2 {
+  font-size: 42px;
+  margin: 0;
+}
+
+.welcome .persona-button {
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+.start-hint {
+  position: absolute;
+  width: 600px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -50px;
+  font-size: 2em;
+  line-height: 100px;
+  color: #666;
+  text-align: center;
+}
+
+.paver {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  padding-bottom: 180px;
+}
+
+.canvas {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.tray-scroll {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0px;
+  overflow: scroll;
+}
+
+.tray {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 230px;
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
+  white-space: nowrap;
+  overflow: visible;
+  background-color: #eee;
+  border: 2px solid #eee;
+}
+.tray.hover {
+  border-color: #ddd;
+}
+
+
+.tray .tile {
+  display: inline-block;
+  margin: 16px;
+  white-space: normal;
+}
+
+.controls {
+  position: fixed;
+  right: 4px;
+  top: 4px;
+  z-index: 1;
+}
+
+.tile {
+  border: 2px solid #ccc;
+  background: white;
+  padding: 12px;
+  border-radius: 2px;
+}
+.metadata p:first-child {
+  margin: 0;
+}
+
+.placement {
+  position: absolute;
+  z-index: 1;
+}
+.placement img {
+  display: block;
+}
+.badge-img,
+.flipper {
+  width: 150px;
+  height: 150px;
+}
+.back {
+  text-align: left;
+  width: 100%;
+}
+
+html.debug .paver {
+  background-color: #EFFAB4;
+}
+html.debug .canvas {
+  border: 1px dashed #ccc;
+}
+
+.modal-curtain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.2);
+  z-index: 1001;
+}
+
+.modal {
+  display: table;
+}
+
+.modal-cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.modal-content {
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  z-index: 1002;
+  display: table;
+  position: relative;
+}
+
+.modal-content > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-content label {
+  display: block;
+}
+.modal-content input {
+  display: block;
+  margin: auto;
+  width: 400px;
+}
+
+.modal-close {
+  font-weight: bold;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+}
+
+.tile .metadata a:link,
+.tile .metadata a:visited,
+.tile .metadata a:hover,
+.tile .metadata a:active {
+  color: #1A5180;
+}
+
+.tile .metadata .footer {
+  width: 100%;
+  min-height: 3em;
+  position: absolute;
+  bottom: 0;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 0.5em);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 0.5em);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 0.5em);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 0.5em);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 0.5em);
+  margin-left: -8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tile .metadata .footer .criteria {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}
+
+.tile .metadata .footer .evidence {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.tile .back {
+  height: 100%;
+}

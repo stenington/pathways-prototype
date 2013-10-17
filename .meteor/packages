@@ -7,7 +7,6 @@ standard-app-packages
 insecure
 preserve-inputs
 http
-autopublish
 jquery-ui
 jquery
 accounts-persona

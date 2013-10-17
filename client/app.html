@@ -1,0 +1,113 @@
+<head>
+  <title>Pathways</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+</head>
+<body>
+  <div class="main">
+    {{renderPage}}
+  </div>
+</body>
+
+<template name="main">
+  {{#if currentUser}}
+    {{> paver}}
+  {{else}}
+    {{> welcome}}
+  {{/if}}
+</template>
+
+<template name="welcome">
+  <div class="splash">
+    <div class="welcome">
+      <h1>Got Open Badges?</h1>
+      <h2>Now Pave Your Pathway!</h2>
+      <div>
+        <a class="persona-button login-button" href="#">
+          <span>Import from your Backpack</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="paver">
+  <div class="controls">
+    {{loginButtons}}
+    <button class="done" {{#unless saveable}}disabled="true"{{/unless}}>Done</button>
+  </div>
+  <div class="paver">
+    <div class="canvas">
+      {{#unless saveable}}
+        <p class="start-hint">Drag and snap badges into pathways</p>
+      {{/unless}}
+      {{> pathway}}
+    </div>
+    <div class="tray-scroll">
+      <div class="tray">
+        {{#each unusedBadges}}
+          {{> badge}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-curtain" {{#unless showModal}}style="display: none;"{{/unless}}>
+  <div class="modal-cell">
+    <div class="modal-content">
+      <a href="#" class="modal-close modal-cancel">⨯</a>
+      <div>
+        <label for="pathway-name">All done? Now give your Pathway a name</label>
+        <input type="text" placeholder="e.g. How to survive mozfest" id="pathway-name" value="{{name}}">
+        <button class="share">Share</button><button class="modal-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</template>
+
+<template name="badge">
+  <div class="tile unplaced sash-flip-target" data-id={{_id}}>
+    {{> card}}
+  </div>
+</template>
+
+<template name="card">
+  {{#constant}}
+    <div class="flipper">
+      <div class="front">
+        <img class="badge-img" src="{{cachedImage}}" width="150">
+      </div>
+      <div class="back">
+        <div class="metadata">                                                                                                          
+          <p class="name">{{name}}</p>
+          <p>Issued by
+          <a class="orgName" href="{{issuer.url}}">{{issuer.name}}</a>.
+          <!--<p>{{description}}</p>-->
+          <div class="footer">
+            {{#if assertion.evidence }}
+              <a href="{{assertion.evidence}}" target="_blank" class="evidence">See the evidence...</a>
+            {{/if}}
+            <a href="{{criteria}}" target="_blank" class="criteria">See the criteria...</a>
+          </div>
+      </div>
+    </div>
+  {{/constant}}
+</template>
+  
+<template name="pathway">
+  {{#each badgePlacements}}
+    {{> badgePlacement}}
+  {{/each}}
+</template>
+
+<template name="badgePlacement">
+  <div class="placement tile" data-id={{_id}} style="{{#if top}}top: {{top}}px;{{/if}}{{#if left}}left: {{left}}px;{{/if}}">
+    {{#with badge}}
+      {{> card}}
+    {{/with}}
+  </div>
+</template>
+
+<template name="showPathway">
+  {{name}}
+  {{> pathway}}
+</template>
