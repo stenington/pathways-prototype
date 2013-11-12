@@ -1,3 +1,11 @@
+/*  app.js:
+      the client-side app
+
+    notes:
+      This is perhaps a bit monolithic.
+      Drag 'n drop functionality happens through jquery-ui draggables and droppables.
+*/
+
 Deps.autorun(function () {
   if (Meteor.user()) {
     Meteor.call('loadPublicBadges');
@@ -13,7 +21,7 @@ Template.welcome.events({
 });
 
 Template.paver.created = function () {
-  Session.set('editing', true);
+  Session.set('editing', true); // controls draggability
 };
 
 Template.paver.destroyed = function () {
@@ -125,6 +133,6 @@ Template.badge.rendered = function () {
 
 Template.showPathway.helpers({
   name: function () {
-    return Pathways.findOne() ? Pathways.findOne().name : 'NOPE';
+    return Pathways.findOne() ? Pathways.findOne().name : '';
   }
 });

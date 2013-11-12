@@ -1,3 +1,11 @@
+/*  displayer.js:
+      loads badges from all of a user's public Backpack groups
+
+    notes:
+      may not handle all assertion types, this was hacked up against
+      0.5.0 assertions
+*/
+
 Meteor.methods({
   loadPublicBadges: function() {
     var user = Meteor.user();

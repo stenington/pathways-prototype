@@ -1,3 +1,7 @@
+/*  publications.js:
+      I'm not sure I fully get publications yet.
+*/
+
 Meteor.publish('user-data', function (userId) {
   if (userId) {
     var username = Meteor.users.findOne(userId).username;

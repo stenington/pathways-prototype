@@ -1,3 +1,7 @@
+/*  persona.js
+      cut 'n pasted, bro: https://github.com/vladikoff/meteor-accounts-persona
+*/
+
 Accounts.onCreateUser(function(options, user) {
   var email = user.services.persona.email;
 

@@ -1,3 +1,10 @@
+/*  demo.js: 
+      inserts demo data (MozFest badges) under the DEMO_OWNER account,
+      if the account is empty
+*/
+
+const DEMO_OWNER = "demo@stenington.org"; // demo@stenington.org is a MockMyID account
+
 Meteor.startup(function () {
   var arr = [
     {
@@ -19,7 +26,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Producer",
@@ -40,7 +47,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Supporter",
@@ -61,7 +68,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Sharer",
@@ -82,7 +89,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Mentorer",
@@ -103,7 +110,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Webmaker",
@@ -124,7 +131,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Maker",
@@ -145,7 +152,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Badger",
@@ -166,7 +173,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Newser",
@@ -187,7 +194,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Sciencer",
@@ -208,7 +215,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Mobiler",
@@ -229,7 +236,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Opener",
@@ -250,7 +257,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Connector",
@@ -271,7 +278,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest WereFox Winner",
@@ -292,7 +299,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Barista-er",
@@ -313,7 +320,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Designer",
@@ -334,7 +341,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Hacker",
@@ -355,7 +362,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Karaoke-er",
@@ -376,7 +383,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Watcher",
@@ -397,7 +404,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Reveler",
@@ -418,7 +425,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     },
     {
       "name": "MozFest Gamer",
@@ -439,11 +446,11 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": "demo@stenington.org"
+      "owner": DEMO_OWNER
     }
   ];
 
-  var demoBadges = Badges.find({owner: 'demo@stenington.org'});
+  var demoBadges = Badges.find({owner: DEMO_OWNER});
   if(demoBadges.count() == 0) {
     arr.forEach(function(badge){ 
       badge.cachedImage = badge.image;
@@ -454,7 +461,9 @@ Meteor.startup(function () {
       Badges.insert(badge);
     });
   }
+  /*
   else {
+    // One-time update of the demo badges
     demoBadges.fetch().forEach(function(badge){ 
       badge.issuer = {
         name: 'Open Badges',
@@ -463,5 +472,6 @@ Meteor.startup(function () {
       Badges.upsert(badge._id, badge);
     });
   }
+  */
 
 });
