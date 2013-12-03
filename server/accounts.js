@@ -4,6 +4,7 @@
 */
 
 Accounts.onCreateUser(function(options, user) {
+  console.log('Begin creating user');
   if (user.services.persona) {
     var email = user.services.persona.email;
 
