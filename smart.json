@@ -3,6 +3,7 @@
     "jquery-ui": {},
     "accounts-persona": {},
     "router": {},
-    "crypto-md5": {}
+    "crypto-md5": {},
+    "accounts-guest": {}
   }
 }

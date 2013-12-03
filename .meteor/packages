@@ -13,3 +13,6 @@ accounts-persona
 accounts-ui
 router
 crypto-md5
+accounts-guest
+accounts-base
+accounts-password

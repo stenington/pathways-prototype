@@ -5,8 +5,8 @@
 
 const DEMO_OWNER = "demo@stenington.org"; // demo@stenington.org is a MockMyID account
 
-Meteor.startup(function () {
-  var arr = [
+function getDemoBadges (owner) {
+  return [
     {
       "name": "MozFest Session Leader",
       "shortname": "mozfest-session-leader",
@@ -26,7 +26,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Producer",
@@ -47,7 +47,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Supporter",
@@ -68,7 +68,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Sharer",
@@ -89,7 +89,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Mentorer",
@@ -110,7 +110,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Webmaker",
@@ -131,7 +131,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Maker",
@@ -152,7 +152,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Badger",
@@ -173,7 +173,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Newser",
@@ -194,7 +194,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Sciencer",
@@ -215,7 +215,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Mobiler",
@@ -236,7 +236,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Opener",
@@ -257,7 +257,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Connector",
@@ -278,7 +278,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest WereFox Winner",
@@ -299,7 +299,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Barista-er",
@@ -320,7 +320,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Designer",
@@ -341,7 +341,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Hacker",
@@ -362,7 +362,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Karaoke-er",
@@ -383,7 +383,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Watcher",
@@ -404,7 +404,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Reveler",
@@ -425,7 +425,7 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     },
     {
       "name": "MozFest Gamer",
@@ -446,32 +446,40 @@ Meteor.startup(function () {
         ]
       },
       "program": "bda68a0b505bc0c7cf21bc7900280ee74845f693",
-      "owner": DEMO_OWNER
+      "owner": owner
     }
   ];
+}
 
-  var demoBadges = Badges.find({owner: DEMO_OWNER});
-  if(demoBadges.count() == 0) {
-    arr.forEach(function(badge){ 
-      badge.cachedImage = badge.image;
-      badge.issuer = {
-        name: 'Open Badges',
-        url: 'http://openbadges.org'
-      };
-      Badges.insert(badge);
-    });
+Meteor.methods({
+  giveDemoBadges: function  (owner) {
+    var demoBadges = Badges.find({owner: owner});
+    if(demoBadges.count() == 0) {
+      var arr = getDemoBadges(owner);
+      arr.forEach(function(badge){ 
+        badge.cachedImage = badge.image;
+        badge.issuer = {
+          name: 'Open Badges',
+          url: 'http://openbadges.org'
+        };
+        Badges.insert(badge);
+      });
+    }
+    /*
+    else {
+      // One-time update of the demo badges
+      demoBadges.fetch().forEach(function(badge){ 
+        badge.issuer = {
+          name: 'Open Badges',
+          url: 'http://openbadges.org'
+        };
+        Badges.upsert(badge._id, badge);
+      });
+    }
+    */
   }
-  /*
-  else {
-    // One-time update of the demo badges
-    demoBadges.fetch().forEach(function(badge){ 
-      badge.issuer = {
-        name: 'Open Badges',
-        url: 'http://openbadges.org'
-      };
-      Badges.upsert(badge._id, badge);
-    });
-  }
-  */
+});
 
+Meteor.startup(function () {
+  Meteor.call('giveDemoBadges', DEMO_OWNER);   
 });

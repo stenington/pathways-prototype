@@ -5,7 +5,8 @@
       "jquery-ui": {},
       "accounts-persona": {},
       "router": {},
-      "crypto-md5": {}
+      "crypto-md5": {},
+      "accounts-guest": {}
     },
     "packages": {
       "jquery-ui": {
@@ -24,9 +25,14 @@
         "commit": "d00e380dda2184b70e909fc4a0fb5358d602c586"
       },
       "crypto-md5": {
-        "git": "https://github.com/tmeasday/meteor-crypto-md5.git",
-        "tag": "v0.0.2",
-        "commit": "a943bea4cffeac9a14c2825dfe57d32b9d677e6f"
+        "git": "https://github.com/oortcloud/meteor-crypto-md5.git",
+        "tag": "v3.1.2.2",
+        "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
+      },
+      "accounts-guest": {
+        "git": "https://github.com/artwells/meteor-accounts-guest.git",
+        "tag": "v0.0.6",
+        "commit": "f40bcf1f9e5999c70ab81a4f1e7a39f3ce78aa57"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
@@ -39,9 +45,9 @@
         "commit": "dc4965f1424cfca625ec3fbea17eace03f8e32c5"
       },
       "crypto-base": {
-        "git": "https://github.com/tmeasday/meteor-crypto-base.git",
-        "tag": "v0.0.3",
-        "commit": "fdc0b7b3d24e2e31c5c95beddafe890ffbaafd42"
+        "git": "https://github.com/oortcloud/meteor-crypto-base.git",
+        "tag": "v3.1.2.1",
+        "commit": "5df8d82a0595553415bbfae2930c6ecbeece5794"
       }
     }
   }

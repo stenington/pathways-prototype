@@ -17,6 +17,9 @@ Deps.autorun(function () {
 Template.welcome.events({
   'click .login-button': function () {
     Meteor.loginWithPersona();
+  },
+  'click .demo-login': function () {
+    Meteor.loginVisitor();
   }
 });
 
